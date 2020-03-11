@@ -1,7 +1,5 @@
 package br.com.supermercado.services;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,11 +12,6 @@ public class ProdutoService {
 
 	@Autowired
 	private ProdutoRepository produtoRepository;
-
-	public List<Produto> list() {
-
-		return produtoRepository.findAll();
-	}
 
 	public Produto inserir(ProdutoInsertCommand command) {
 

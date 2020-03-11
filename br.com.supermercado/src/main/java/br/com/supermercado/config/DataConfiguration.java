@@ -16,8 +16,7 @@ public class DataConfiguration {
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		//Nome do Banco de Dados (supermarcado)
-		dataSource.setUrl("jdbc:mysql://localhost:3306/supermercado");
+		dataSource.setUrl("jdbc:mysql://127.0.0.1:3306/supermercado?useTimezone=true&serverTimezone=UTC");
 		dataSource.setUsername("root");
 		dataSource.setPassword("");
 		return dataSource;
@@ -29,8 +28,11 @@ public class DataConfiguration {
 		adapter.setDatabase(Database.MYSQL);
 		adapter.setShowSql(true);
 		adapter.setGenerateDdl(true);
-		adapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect");
+		adapter.setDatabasePlatform("org.hibernate.dialect.MySQL8Dialect");
 		adapter.setPrepareConnection(true);
+
 		return adapter;
+
 	}
+
 }

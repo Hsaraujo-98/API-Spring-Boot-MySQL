@@ -8,6 +8,4 @@ import br.com.supermercado.domain.Produto;
 @Repository
 public interface ProdutoRepository extends JpaRepository<Produto, Long> {
 
-	Produto saveProduto(Produto produto);
-
 }

@@ -15,4 +15,5 @@ public class ProdutoInsertCommand {
 
 	@NotBlank(message = "Data de validade deve ser preenchida")
 	private String dataValidade;
+
 }
